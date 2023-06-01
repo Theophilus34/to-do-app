@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Josefin Sans', sans-serif;
+}
+.container{
+    width: 1400px;
+    height: 300px;
+    margin-left: 0px;
+    background-image: url("./images/bg-desktop-light.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    position: absolute;
+    z-index: -1;
+}
