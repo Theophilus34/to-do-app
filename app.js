@@ -23,7 +23,7 @@ function displayItems() {
                   <div class="input-controller">
                   <div class="circle">
                   ${itemsArray[i].completed ? check : ''}
-                  </div>
+                  </div>ccr
                   <textarea disabled id="cancel">${itemsArray[i].value}</textarea>
                   </div>
                   <div class="edit-controller">
@@ -35,6 +35,13 @@ function displayItems() {
     activateDeleteListeners()
     cicleclicked()
 }
+function activateDeleteListeners(){
+    let deleteBtn = document.querySelectorAll(".deleteBtn")
+    deleteBtn.forEach((dB, i) => {
+      dB.addEventListener("click", () => { deleteItem(i) })
+    })
+  }
+  
 function activateSaveListeners() {
     const saveBtn = document.querySelectorAll(".saveBtn")
     const inputs = document.querySelectorAll(".input-controller textarea")
@@ -54,6 +61,12 @@ function createItem(item) {
     localStorage.setItem('items', JSON.stringify(itemsArray))
     location.reload()
 }
+
+function deleteItem(i){
+    itemsArray.splice(i,1)
+    localStorage.setItem('items', JSON.stringify(itemsArray))
+    location.reload()
+  }
 window.onload = function () {
     displayItems()
 };
