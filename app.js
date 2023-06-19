@@ -35,13 +35,31 @@ function displayItems() {
     activateDeleteListeners()
     cicleclicked()
 }
-function activateDeleteListeners(){
+function cicleclicked() {
+    let circlebtn = document.querySelectorAll(".circle")
+    circlebtn.forEach((cB, i) => {
+        cB.addEventListener("click", (e) => {
+            if (cB.classList.contains('checked')) {
+                cB.classList.remove('checked')
+                e.target.children[0].remove()
+                cB.style.background = "#fff";
+            } else {
+                cB.classList.add('checked')
+                document.getElementById("cancel").style.textDecoration = "line-through";
+                document.getElementById("cancel").style.opacity = "0.5";
+                cB.innerHTML += check
+                cB.style.background = "hsl(220, 98%, 61%)";
+            }
+        })
+    })
+}
+function activateDeleteListeners() {
     let deleteBtn = document.querySelectorAll(".deleteBtn")
     deleteBtn.forEach((dB, i) => {
-      dB.addEventListener("click", () => { deleteItem(i) })
+        dB.addEventListener("click", () => { deleteItem(i) })
     })
-  }
-  
+}
+
 function activateSaveListeners() {
     const saveBtn = document.querySelectorAll(".saveBtn")
     const inputs = document.querySelectorAll(".input-controller textarea")
@@ -62,11 +80,11 @@ function createItem(item) {
     location.reload()
 }
 
-function deleteItem(i){
-    itemsArray.splice(i,1)
+function deleteItem(i) {
+    itemsArray.splice(i, 1)
     localStorage.setItem('items', JSON.stringify(itemsArray))
     location.reload()
-  }
+}
 window.onload = function () {
     displayItems()
 };
