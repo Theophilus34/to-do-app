@@ -41,6 +41,8 @@ function cicleclicked() {
         cB.addEventListener("click", (e) => {
             if (cB.classList.contains('checked')) {
                 cB.classList.remove('checked')
+                document.getElementById("cancel").style.textDecoration = "none";
+               
                 e.target.children[0].remove()
                 cB.style.background = "#fff";
             } else {
