@@ -139,7 +139,8 @@ input {
 textarea:focus {
     box-shadow: 0 0 5px white;
 }
-.circle{
+
+.circle {
     width: 25px;
     height: 25px;
     background-color: transparent;
@@ -149,4 +150,80 @@ textarea:focus {
     display: flex;
     justify-content: center;
     align-items: center;
-  }
+}
+
+@media screen and (max-width:376px) {
+    .container {
+        margin-left: 0;
+        width: 375px;
+        height: 100px;
+        background-size: cover;
+    }
+
+    .logo {
+        margin-top: 20px;
+        padding: 0px;
+        width: 60%;
+    }
+
+    .logo-container {
+        align-items: start;
+        margin-left: 20px;
+    }
+
+    .logo-container h1 {
+        font-size: 10px;
+        letter-spacing: 4px;
+    }
+
+    .text-container {
+        width: 60%;
+        margin-top: 30px;
+        height: 10vh;
+    }
+
+    .text-btn {
+        width: 100%;
+        height: 20px;
+        padding-left: 2px;
+
+    }
+
+    input {
+        width: 100%;
+        height: 14px;
+        font-size: 7px;
+    }
+
+    #enter {
+        width: 50px;
+        height: 20px;
+        font-size: 8px;
+    }
+
+    .input-controller textarea {
+        width: 100%;
+        height: 20px;
+        padding-left: 2px;
+        padding-top: 3px;
+        font-size: 12px;
+    }
+
+    .item {
+        height: 20px;
+        padding: 2px;
+    }
+
+    .circle {
+        width: 7px;
+        height: 7px;
+    }
+
+    .edit-controller {
+        padding-top: 0px;
+    }
+
+    .deleteBtn {
+        width: 8px;
+        height: 8px;
+    }}
