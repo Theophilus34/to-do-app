@@ -40,6 +40,13 @@
     color: white;
 }
 
+#darkmode {
+    background-image: url("/images/icon-moon.svg");
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+}
+
 .text-container {
     width: 30%;
     margin-top: 50px;
@@ -226,4 +233,12 @@ textarea:focus {
     .deleteBtn {
         width: 8px;
         height: 8px;
-    }}
+    }
+
+    #darkmode {
+        background-image: url("/images/icon-moon.svg");
+        background-size: contain;
+        width: 10px;
+        height: 10px;
+    }
+}

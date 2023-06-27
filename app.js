@@ -23,7 +23,7 @@ function displayItems() {
                   <div class="input-controller">
                   <div class="circle">
                   ${itemsArray[i].completed ? check : ''}
-                  </div>ccr
+                  </div>
                   <textarea disabled id="cancel">${itemsArray[i].value}</textarea>
                   </div>
                   <div class="edit-controller">
@@ -42,7 +42,7 @@ function cicleclicked() {
             if (cB.classList.contains('checked')) {
                 cB.classList.remove('checked')
                 document.getElementById("cancel").style.textDecoration = "none";
-               
+                document.getElementById("cancel").style.opacity = "1";
                 e.target.children[0].remove()
                 cB.style.background = "#fff";
             } else {
@@ -90,3 +90,20 @@ function deleteItem(i) {
 window.onload = function () {
     displayItems()
 };
+const toggle = document.getElementById('darkmode');
+const body = document.querySelector('body');
+
+toggle.addEventListener('click', function(){
+    if(toggle.style.backgroundImage =' url("/images/icon-moon.svg")'){
+        body.style.background = 'black';
+        body.style.color = 'white';
+        body.style.transition = '2s';
+        toggle.style.backgroundImage =' url("/images/icon-sun.svg")';
+        
+    }else{
+        body.style.background = 'white';
+        body.style.color = 'black';
+        body.style.transition = '2s';
+        toggle.style.backgroundImage =' url("/images/icon-moon.svg")';
+    }
+});

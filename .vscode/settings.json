@@ -2,6 +2,8 @@
     "editor.tabCompletion": "on",
     "liveServer.settings.port": 5501,
     "cSpell.words": [
-        "cicleclicked"
+        "cicleclicked",
+        "circlebtn",
+        "darkmode"
     ]
 }
