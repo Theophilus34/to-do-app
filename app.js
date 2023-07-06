@@ -100,7 +100,7 @@ toggle.addEventListener('click', function(){
         body.style.transition = '2s';
         toggle.style.backgroundImage =' url("/images/icon-sun.svg")';
         
-    }else{
+    }else if (toggle.style.backgroundImage = ' url("/images/icon-sun.svg")'){
         body.style.background = 'white';
         body.style.color = 'black';
         body.style.transition = '2s';
